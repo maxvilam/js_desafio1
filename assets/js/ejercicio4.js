@@ -3,12 +3,16 @@ let ndias = 0;
 
 do {
   dias = prompt("Ingrese la cantidad de días para calcular Año-Semanas-Días");
-  ndias = parseInt(dias);
 } while (isNaN(ndias));
+ndias = parseInt(dias);
 
 let years = 0;
 let semanas = 0;
 let rdias = 0;
+
+if (ndias<0){
+  ndias=ndias * -1;
+}
 
 if (ndias < 7) {
   years = 0;
